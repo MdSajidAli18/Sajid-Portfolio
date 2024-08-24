@@ -16,33 +16,33 @@ import WorkSliderBtns from "@/components/WorkSliderBtns"
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "Full Stack Project",
     title: "project 1",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
-    stack: [{name: "Html 5"}, {name: "Css 3"}, {name: "JavaScript"}],
+    description: "Developed a responsive e-commerce platform, Ecomaxx, using the MERN stack (MongoDB, Express.js, React, Node.js), featuring product management, secure user authentication, a dynamic shopping cart, and order management. Integrated an admin panel with exclusive access for administrators, allowing for product upload/edit and user details tracking, using Cloudinary for image uploads.",
+    stack: [{name: "MongoDB"}, {name: "Express.js"}, {name: "React.js"}, {name: "Node.js"}],
     image: "/assets/work/thumb1.png",
     live: "",
-    github: ""
+    github: "https://github.com/MdSajidAli18/E-commerce"
   },
   {
     num: "02",
-    category: "fullstack",
+    category: "Threads App Clone",
     title: "project 2",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
-    stack: [{name: "Next.js"}, {name: "Tailwind.css"}, {name: "Node.js"}],
+    description: " Developed a full-stack messaging app using MERN stack, Next.js, and TypeScript, featuring CRUD operations, user authentication/authorization with Clerk, and deployment on Vercel. Enabled users to share photos, videos, messages, and Stories with their close friends list on Instagram.",
+    stack: [{name: "MERN Stack"}, {name: "Next.js"}, {name: "Typescript"}],
     image: "/assets/work/thumb2.png",
     live: "",
-    github: ""
+    github: "https://github.com/MdSajidAli18/threads"
   },
   {
     num: "03",
-    category: "fullstack",
+    category: "React Responsive Gym Website",
     title: "project 3",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
-    stack: [{name: "Next.js"}, {name: "Tailwind.css"}, {name: "Node.js"}],
+    description: "In this ReactJS project, I developed an impressive, responsive gym website. I utilized React hooks, modern CSS, Framer Motion, and a number counter, among other tools. To enhance its functionality, I integrated the EmailJS library for contact features.",
+    stack: [{name: "React.js"}, {name: "Tailwind.css"}, {name: "EmailJS"}],
     image: "/assets/work/thumb3.png",
     live: "",
-    github: ""
+    github: "https://github.com/MdSajidAli18/GymWebsite"
   }
 ]
 
@@ -77,18 +77,18 @@ const Work = () => {
               </div>
 
               {/* project category */}
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
+              <h2 className="text-[42px] font-bold leading-none text-green-700 group-hover:text-black transition-all duration-500 capitalize">
+                {project.category}
               </h2>
 
               {/* project description */}
-              <p className="text-white/60">{project.description}</p>
+              <p className="text-slate-700">{project.description}</p>
 
               {/* stack */}
               <ul className="flex gap-4">
                 {project.stack.map((item, index)=>{
                   return(
-                    <li key={index} className="text-xl text-accent">
+                    <li key={index} className="text-xl text-green-700">
                       {item.name}
 
                       {/* remove the last comma */}
@@ -100,7 +100,7 @@ const Work = () => {
               </ul>
 
               {/* border */}
-              <div className="border border-white/60"></div>
+              <div className="border border-slate-500"></div>
 
               {/* buttons */}
               <div className="flex items-center gap-4">
@@ -110,12 +110,13 @@ const Work = () => {
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
 
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent"/>
+                      <TooltipTrigger className="w-[60px] h-[60px] border-2 border-green-700 rounded-full bg-white hover:bg-green-700 flex justify-center items-center group">
+                        <BsArrowUpRight className="text-green-700 text-3xl group-hover:text-white"/>
                       </TooltipTrigger>
+                      <p className="text-slate-800">Live project</p>
 
                       <TooltipContent>
-                        <p>Live projects</p>
+                        <p>Live project</p>
                       </TooltipContent>
 
                     </Tooltip>
@@ -127,9 +128,10 @@ const Work = () => {
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
 
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub className="text-white text-3xl group-hover:text-accent"/>
+                      <TooltipTrigger className="w-[60px] h-[60px] border-2 border-green-700 rounded-full bg-white hover:bg-green-700 flex justify-center items-center group">
+                        <BsGithub className="text-green-700 text-3xl group-hover:text-white"/>
                       </TooltipTrigger>
+                      <p className="text-slate-800">Github repository</p>
 
                       <TooltipContent>
                         <p>Github repository</p>
@@ -177,7 +179,7 @@ const Work = () => {
               {/* slider buttons */}
               <WorkSliderBtns
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
-                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                btnStyles="bg-green-700 hover:bg-green-800 text-white text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
               />
 
             </Swiper>
